@@ -1,16 +1,21 @@
+NAME = libft.a
+
 CC = gcc
-CFLAGS = -c -o
+CFLAGS = -Wall -Wextra -Werror
 
 AR = ar
 ARFLAGS = -rc
 
-TARGET = libft.a
-
 SRCS = first.c second.c third.c
 OBJS = first.o second.o third.o
 
-$(OBJS): $(SRCS)
-	$(CC) $(CFLAGS) $@ $<
+all : $(NAME)
 
-$(TARGET) : $(OBJS)
+#$(OBJS): $(SRCS)
+#	$(CC) $(CFLAGS) -c $(SRCS)
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $<
+
+$(NAME) : $(OBJS)
 	$(AR) $(ARFLAGS) $@ $?

@@ -3,12 +3,12 @@
 AR = AR
 ARFLAGS = -rc
 
-TARGET = libft.a
+NAME = libft.a
 
 SRCS = first.c second.c third.c
 OBJS = first.o second.o third.o
 
 # $^ 대신에 $? 쓸 수 있음
 # 차이 : ^는 의존하는 대상들의 전체 목록, ?는 의존하는 대상들 중 변경된 것들의 목록
-$(TARGET) : $(OBJS)
+$(NAME) : $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
