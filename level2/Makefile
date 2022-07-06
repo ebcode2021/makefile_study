@@ -1,4 +1,4 @@
-# CC / CLFAGS 는 추후 쓰일 일이 있을 것 같아 작성
+# CC / CLFAGS 는 추후 쓰일 일이 있을 것 같아 작성.
 #CC = gcc
 #CFLAGS = -Wall -Wextra - Werror
 
